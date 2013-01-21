@@ -11,6 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20130121152549) do
+
+  create_table "sevenpages_pages", :force => true do |t|
+    t.string   "title"
+    t.string   "slug",       :limit => 100
+    t.text     "content"
+    t.boolean  "published"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
 
 end

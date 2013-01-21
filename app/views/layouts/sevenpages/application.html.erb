@@ -2,11 +2,21 @@
 <html>
 <head>
   <title>Sevenpages</title>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <%= stylesheet_link_tag    "sevenpages/application", :media => "all" %>
   <%= javascript_include_tag "sevenpages/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<nav role="navigation">
+  <ul>
+    <li><%= link_to 'Home', root_url %></li>
+    <li><%= link_to 'Pages', '#' %></li>
+  </ul>
+</nav>
 
 <%= yield %>
 

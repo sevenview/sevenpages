@@ -27,4 +27,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "launchy"
   s.add_development_dependency "fivemat"
   s.add_development_dependency "ffaker"
+  s.add_development_dependency "guard-rspec"
+  s.add_development_dependency "rb-fsevent"
+  s.add_development_dependency "growl"
 end

@@ -1,0 +1,1 @@
+Sevenpages.reserved_slugs = []

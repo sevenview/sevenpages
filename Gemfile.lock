@@ -117,10 +117,6 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
-    shoulda (3.3.2)
-      shoulda-context (~> 1.0.1)
-      shoulda-matchers (~> 1.4.1)
-    shoulda-context (1.0.1)
     shoulda-matchers (1.4.1)
       activesupport (>= 3.0.0)
     sprockets (2.2.2)
@@ -150,5 +146,5 @@ DEPENDENCIES
   launchy
   rspec-rails
   sevenpages!
-  shoulda
+  shoulda-matchers
   sqlite3

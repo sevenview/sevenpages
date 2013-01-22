@@ -15,16 +15,3 @@ gem "jquery-rails"
 
 # To use debugger
 # gem 'debugger'
-
-group :development, :test, :staging do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'capybara-webkit'
-end
-
-group :test do
-  gem 'launchy'
-  gem 'capybara-webkit'
-  gem 'shoulda'
-  gem 'fivemat'
-end

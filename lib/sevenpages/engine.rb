@@ -10,3 +10,5 @@ module Sevenpages
     end
   end
 end
+
+require 'kaminari'

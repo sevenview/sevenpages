@@ -1,1 +1,32 @@
-<h1>Pages</h1>
+<h2>Pages</h2>
+
+<%= link_to "Add a Page", new_page_path, class: 'button add-button' %>
+
+<div class="pages">
+  <table class="pages-table">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Slug</th>
+      <th>Published?</th>
+      <th>&nbsp;</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @pages.each do |page| %>
+    <tr>
+      <td><%= page.title %></td>
+      <td><%= page.slug %></td>
+      <td><%= published_status(page) %></td>
+      <td class="tools">
+        <%= link_to "Edit", edit_page_path(page), class: 'edit' %> |
+        <%= link_to "Delete", page_path(page), method: :destroy,
+                    confirm: %{Are you sure you want to delete the page "#{page.title}"?} %>
+      </td>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= paginate @pages %>

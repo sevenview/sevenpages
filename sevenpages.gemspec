@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   s.add_dependency "kaminari"
 
   s.add_development_dependency "sqlite3"
+
+  # Testing
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "shoulda-matchers"
   s.add_development_dependency "factory_girl_rails"
@@ -28,6 +30,8 @@ Gem::Specification.new do |s|
   s.add_development_dependency "launchy"
   s.add_development_dependency "fivemat"
   s.add_development_dependency "ffaker"
+
+  # Guard
   s.add_development_dependency "guard-rspec"
   s.add_development_dependency "rb-fsevent"
   s.add_development_dependency "growl"

@@ -2,7 +2,7 @@ require 'ffaker'
 
 FactoryGirl.define do
   factory :page, class: Sevenpages::Page do
-    title { Faker::Lorem.words(2).join(' ').titleize }
+    title { Faker::Lorem.words(4).join(' ').titleize }
     slug  { title.parameterize }
     content { Faker::HTMLIpsum.p(100) }
 

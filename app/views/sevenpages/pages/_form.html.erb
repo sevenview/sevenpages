@@ -1,5 +1,7 @@
 <%= form_page_header('page') %>
 
+<%= error_messages_for(@page) %>
+
 <%= form_for @page do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>

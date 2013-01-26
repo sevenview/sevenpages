@@ -36,9 +36,12 @@ describe "Feature: Managing Pages" do
   end
 
   describe "Creating a Page" do
-    it "creates a new page when given valid data" do
+    before do
       visit sevenpages.pages_path
       click_link 'Add a Page'
+    end
+
+    it "creates a new page when given valid data" do
       fill_in 'Title', with: 'Foo Page'
       fill_in 'Slug', with: 'foo-page'
       fill_in 'Content', with: 'Foo bar baz'
@@ -49,6 +52,15 @@ describe "Feature: Managing Pages" do
       end
 
       page.should have_content 'Foo Page'
+    end
+
+    it "doesn't create a new page when given invalid data" do
+      fill_in 'Title', with: ''
+      click_button 'Create Page'
+
+      within '.error-messages' do
+        page.should have_content 'prohibited this form from being saved'
+      end
     end
   end
 end

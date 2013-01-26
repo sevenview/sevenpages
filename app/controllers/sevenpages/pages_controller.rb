@@ -11,8 +11,14 @@ module Sevenpages
     end
 
     def create
-      Page.create(params[:page])
-      redirect_to pages_path, notice: "Added Page"
+      @page = Page.new(params[:page])
+
+      if @page.save
+        redirect_to pages_path, notice: "Added Page"
+      else
+        flash.alert = "Error adding page"
+        render :new
+      end
     end
   
     def edit

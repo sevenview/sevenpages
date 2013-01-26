@@ -36,7 +36,7 @@ describe "Feature: Managing Pages" do
   end
 
   describe "Creating a Page" do
-    it "creates a new page" do
+    it "creates a new page when given valid data" do
       visit sevenpages.pages_path
       click_link 'Add a Page'
       fill_in 'Title', with: 'Foo Page'

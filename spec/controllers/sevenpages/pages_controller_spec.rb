@@ -24,6 +24,24 @@ module Sevenpages
       it { should assign_to(:page) }
     end
 
+    describe "POST create" do
+      context "with valid attributes" do
+        it "creates the page" do
+          expect {
+            post :create, page: FactoryGirl.attributes_for(:page), use_route: :sevenpages
+          }.to change(Page, :count).by(1)
+        end
+      end
+
+      context "with invalid attributes" do
+        it "doesn't create the page" do
+          expect {
+            post :create, page: { title: '' }, use_route: :sevenpages
+          }.to_not change(Page, :count)
+        end
+      end
+    end
+
     describe "GET edit" do
       let(:page) { FactoryGirl.create :page }
 

@@ -34,4 +34,21 @@ describe "Feature: Managing Pages" do
       page.should have_selector('nav.pagination')
     end
   end
+
+  describe "Creating a Page" do
+    it "creates a new page" do
+      visit sevenpages.pages_path
+      click_link 'Add a Page'
+      fill_in 'Title', with: 'Foo Page'
+      fill_in 'Slug', with: 'foo-page'
+      fill_in 'Content', with: 'Foo bar baz'
+      click_button 'Create Page'
+
+      within '.flash.notice' do
+        page.should have_content 'Added Page'
+      end
+
+      page.should have_content 'Foo Page'
+    end
+  end
 end

@@ -1,0 +1,11 @@
+<%= form_page_header('page') %>
+
+<%= form_for @page do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :slug %>
+  <%= f.text_field :slug %>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  <%= f.submit %>
+<% end %>

@@ -7,3 +7,4 @@ TODO
   
 * Add templating (file-based, with liquid)
 * Consider integrating [behave.js](http://jakiestfu.github.com/Behave.js/)
+* Have slug dynamically generated when creating a new Page

@@ -9,6 +9,11 @@ module Sevenpages
     def new
       @page = Page.new
     end
+
+    def create
+      Page.create(params[:page])
+      redirect_to pages_path, notice: "Added Page"
+    end
   
     def edit
       @page = Page.find(params[:id])

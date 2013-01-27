@@ -24,5 +24,24 @@ module Sevenpages
     def edit
       @page = Page.find(params[:id])
     end
+
+    def update
+      @page = Page.find(params[:id])
+
+      if @page.update_attributes(params[:page])
+        redirect_to pages_path, notice: 'Updated Page'
+      else
+        flash.alert = "Error updating page"
+        render :edit
+      end
+    end
+
+    def destroy
+      @page = Page.find(params[:id])
+
+      if @page.destroy
+        redirect_to pages_path, notice: 'Page deleted'
+      end
+    end
   end
 end

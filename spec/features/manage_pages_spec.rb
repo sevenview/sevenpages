@@ -59,8 +59,51 @@ describe "Feature: Managing Pages" do
       click_button 'Create Page'
 
       within '.error-messages' do
-        page.should have_content 'prohibited this form from being saved'
+        page.should have_content 'prohibited'
       end
+    end
+  end
+
+  describe "Editing a Page" do
+    before do
+      FactoryGirl.create :page
+      visit sevenpages.pages_path
+      click_link 'Edit'
+    end
+
+    it "Updates the page when given valid data" do
+      fill_in 'Title', with: 'Foo Bar'
+      click_button 'Update Page'
+
+      within '.flash.notice' do
+        page.should have_content 'Updated Page'
+      end
+
+      page.should have_content 'Foo Bar'
+    end
+
+    it "Doesn't update the page when given invalid data" do
+      fill_in 'Title', with: ''
+      click_button 'Update Page'
+
+      within '.error-messages' do
+        page.should have_content 'prohibited'
+      end
+    end
+  end
+
+  describe "Deleting a Page" do
+    before do
+      FactoryGirl.create :page, title: 'Foo'
+      visit sevenpages.pages_path
+    end
+
+    it "deletes the selected page" do
+      click_link 'Delete'
+      within '.flash.notice' do
+        page.should have_content 'deleted'
+      end
+      page.should_not have_content 'Foo'
     end
   end
 end

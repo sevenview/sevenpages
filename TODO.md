@@ -9,3 +9,4 @@ TODO
 * Consider integrating [behave.js](http://jakiestfu.github.com/Behave.js/)
 * Have slug dynamically generated when creating a new Page
 * Add pretty dialog boxes
+* Make it theme-able

@@ -1,1 +1,1 @@
-Sevenpages.reserved_slugs = []
+Sevenpages.reserved_slugs = ['sevenpages', 'sp-admin', 'admin']

@@ -3,9 +3,10 @@ require 'spec_helper'
 describe Sevenpages::Public::PagesController do
   describe 'GET #show' do
     before do
-      get :show, use_route: :sevenpages
+      cms_page = FactoryGirl.create :published_page
+      get :show, slug: cms_page.slug, use_route: :sevenpages
     end
 
-    it { should render_with_layout nil }
+    it { should render_with_layout :application }
   end
 end

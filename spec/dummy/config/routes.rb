@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   mount Sevenpages::Engine => "/sevenpages"
 
-  get ':slug', to: 'sevenpages/public/pages#show'
+  get ':slug', to: 'sevenpages/public/pages#show', as: :page
 end

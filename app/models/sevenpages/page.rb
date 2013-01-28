@@ -6,6 +6,8 @@ module Sevenpages
     validates :slug, uniqueness: true
     validates_exclusion_of :slug, in: Sevenpages.reserved_slugs
 
+    liquid_methods :title
+
     scope :published, -> {
       where(published: true)
     }

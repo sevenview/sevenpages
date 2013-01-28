@@ -3,6 +3,7 @@ PATH
   specs:
     sevenpages (0.0.1)
       kaminari
+      liquid (~> 2.4.1)
       rails (~> 3.2.11)
 
 GEM
@@ -100,6 +101,7 @@ GEM
       activesupport (>= 3.0.0)
     launchy (2.1.2)
       addressable (~> 2.3)
+    liquid (2.4.1)
     listen (0.6.0)
     lumberjack (1.0.2)
     mail (2.4.4)

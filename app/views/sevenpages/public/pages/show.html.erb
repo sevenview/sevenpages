@@ -1,1 +1,1 @@
-<%= raw(@page.content) %>
+<%= raw(Liquid::Template.parse(@page.content).render('page' => @page)) %>

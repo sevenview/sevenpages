@@ -11,4 +11,11 @@ describe "Feature: Viewing content pages" do
     visit main_app.page_path('foofy')
     page.should have_content "doesn't exist"
   end
+
+  it "renders liquid tags properly" do
+    cms_page = FactoryGirl.create :published_page, title: 'Foo',
+                                  content: "{{ page.title | upcase }} Bar"
+    visit main_app.page_path(cms_page.slug)
+    page.should have_content "FOO Bar"
+  end
 end

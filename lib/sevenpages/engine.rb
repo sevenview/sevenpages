@@ -12,3 +12,4 @@ module Sevenpages
 end
 
 require 'kaminari'
+require 'liquid'

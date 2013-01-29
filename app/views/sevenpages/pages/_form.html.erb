@@ -12,5 +12,5 @@
   <label>
     <%= f.check_box :published %> Published
   </label>
-  <%= f.submit %>
+  <%= f.submit nil, class: 'button submit-button' %> or <%= link_to 'Cancel', pages_path %>
 <% end %>

@@ -9,5 +9,8 @@
   <%= f.text_field :slug %>
   <%= f.label :content %>
   <%= f.text_area :content %>
+  <label>
+    <%= f.check_box :published %> Published
+  </label>
   <%= f.submit %>
 <% end %>

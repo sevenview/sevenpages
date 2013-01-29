@@ -4,7 +4,7 @@
 
 <%= form_for @page do |f| %>
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, autofocus: true %>
   <%= f.label :slug %>
   <%= f.text_field :slug %>
   <%= f.label :content %>

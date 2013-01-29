@@ -1,0 +1,25 @@
+<script src="http://sevenview.dev/assets/jquery.js"></script>
+<script src="/assets/codemirror/lib/codemirror.js"></script>
+<link rel="stylesheet" href="/assets/codemirror/lib/codemirror.css">
+<script src="/assets/codemirror/mode/xml/xml.js"></script>
+<script src="/assets/codemirror/mode/javascript/javascript.js"></script>
+<script src="/assets/codemirror/mode/css/css.js"></script>
+<script src="/assets/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+<textarea name="code" id="code">
+  <%= @page.content %>
+</textarea>
+
+<script>
+  var ta = document.getElementById('code');
+  var editor = CodeMirror.fromTextArea(ta, {
+    mode: 'text/html',
+    tabMode: 'indent',
+    lineNumbers: true,
+    lineWrapping: true,
+    smartIndent: true
+  });
+  editor.setSize('100%','90%');
+</script>
+
+<%= link_to "Save", "#" %>

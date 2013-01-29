@@ -25,6 +25,11 @@ module Sevenpages
       @page = Page.find(params[:id])
     end
 
+    def content_edit
+      @page = Page.find(params[:id])
+      render layout: nil
+    end
+
     def update
       @page = Page.find(params[:id])
 

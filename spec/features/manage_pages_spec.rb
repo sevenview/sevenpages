@@ -44,7 +44,7 @@ describe "Feature: Managing Pages" do
     it "creates a new page when given valid data" do
       fill_in 'Title', with: 'Foo Page'
       fill_in 'Slug', with: 'foo-page'
-      fill_in 'Content', with: 'Foo bar baz'
+      fill_in 'code', with: 'Foo bar baz'
       click_button 'Create Page'
 
       within '.flash.notice' do

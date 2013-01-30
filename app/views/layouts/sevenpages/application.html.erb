@@ -13,6 +13,7 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <%= javascript_include_tag "sevenpages/application" %>
+  <%= yield :head %>
   <%= csrf_meta_tags %>
 </head>
 <body id="<%= controller_name %>">
@@ -37,5 +38,6 @@
     <%= yield %>
   </div>
 </div>
+<%= yield :last %>
 </body>
 </html>

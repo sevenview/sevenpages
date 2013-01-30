@@ -12,3 +12,4 @@ TODO
 * Resolve why Foundation won't work in engine unless included in the host app
 * Style error messages
 * Add form client-side validation
+* Tidy up CodeMirror

@@ -19,7 +19,6 @@
       <td><%= published_status(page) %></td>
       <td class="tools">
         <%= link_to "Edit", edit_page_path(page), class: 'edit' %> |
-        <%= link_to "CM", content_edit_page_path(page) %> |
         <%= link_to "Delete", page_path(page), method: :delete,
                     confirm: %{Are you sure you want to delete the page "#{page.title}"?} %>
       </td>

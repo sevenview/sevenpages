@@ -13,6 +13,8 @@ TODO
 * Style error messages
 * Add form client-side validation
 * Tidy up CodeMirror
+  * Adjust tab behavior
 * Add a 'Save and Continue' button
 * Add keyboard shortcuts (Command-S) to save
 * Add dynamic Menu builder
+* Add ability to comment out a line in the CodeMirror editor

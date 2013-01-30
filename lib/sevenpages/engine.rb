@@ -13,3 +13,4 @@ end
 
 require 'kaminari'
 require 'liquid'
+require 'devise'

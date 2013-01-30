@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe "Feature: Managing Pages" do
+  before do
+    login
+  end
+
   describe "Displaying the master list" do
     before do
       FactoryGirl.create_list :published_page, 15

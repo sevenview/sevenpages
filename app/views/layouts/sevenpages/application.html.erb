@@ -29,7 +29,7 @@
   </ul>
   <ul class="right">
     <li><%= link_to 'Main Site', main_app.root_url, target: '_blank' %></li>
-    <li><%= link_to 'Logout', '#' %></li>
+    <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
   </ul>
 </nav>
 <div class="row">

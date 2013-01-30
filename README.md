@@ -44,6 +44,9 @@ end
 
 Now you can navigate to the Sevenpages admin at `http://yourapp/sp-admin`
 
+Add Devise Routes
+-----------------
+
 
 Configuration
 -------------

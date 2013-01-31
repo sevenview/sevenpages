@@ -1,0 +1,65 @@
+2012-03-11 16:25:45 ERROR  : ERROR:  syntax error at or near "NULL"
+LINE 30: NULL,
+         ^
+2012-03-11 16:26:42 ERROR  : ERROR:  column "type" of relation "products" does not exist
+LINE 25: INSERT INTO products (name, type, description, hourly_rate, ...
+                                     ^
+2012-03-11 16:28:04 ERROR  : ERROR:  null value in column "created_at" violates not-null constraint
+2012-03-11 16:32:08 ERROR  : ERROR:  column "created_at" is of type timestamp without time zone but expression is of type integer
+LINE 38: 2012-03-11,
+         ^
+HINT:  You will need to rewrite or cast the expression.
+2012-03-11 18:04:10 ERROR  : ERROR:  column "Pumps" does not exist
+LINE 1: select id from product_categories where name = "Pumps"
+                                                       ^
+2012-03-11 18:04:25 ERROR  : ERROR:  syntax error at or near ""Pumps""
+LINE 1: select id from product_categories where name = E"Pumps"
+                                                        ^
+2012-03-11 18:05:05 ERROR  : ERROR:  column "pumps" does not exist
+LINE 6:   product_categories.name = Pumps;
+                                    ^
+2012-03-11 18:06:42 ERROR  : ERROR:  syntax error at or near "\"
+LINE 1: \set myvar value
+        ^
+2012-03-11 18:06:53 ERROR  : ERROR:  syntax error at or near "\"
+LINE 1: \set myvar 'foo';
+        ^
+2012-03-11 18:06:57 ERROR  : ERROR:  syntax error at or near "'foo'"
+LINE 1: set myvar 'foo';
+                  ^
+2012-03-11 18:07:04 ERROR  : ERROR:  syntax error at or near "foo"
+LINE 1: set myvar foo;
+                  ^
+2012-03-11 18:13:46 ERROR  : ERROR:  syntax error at or near "458"
+LINE 1: set category_id 458;
+                        ^
+2012-03-11 18:13:50 ERROR  : ERROR:  syntax error at or near "458"
+LINE 1: set category_id 458
+                        ^
+2012-03-11 18:13:54 ERROR  : ERROR:  syntax error at or near "\"
+LINE 1: \set category_id 458
+        ^
+2012-03-11 18:13:57 ERROR  : ERROR:  syntax error at or near "\"
+LINE 1: \set category_id 458;
+        ^
+2012-03-11 18:15:56 ERROR  : ERROR:  syntax error at or near "SELECT"
+LINE 14: SELECT id from product_categories where name = 'Pumps'
+         ^
+2012-03-11 18:36:04 ERROR  : ERROR:  operator does not exist: integer ~~ unknown
+LINE 1: select * from products where product_category_id LIKE '';
+                                                         ^
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+2012-03-11 18:36:14 ERROR  : ERROR:  invalid input syntax for integer: ""
+LINE 1: select * from products where product_category_id = '';
+                                                           ^
+2012-03-11 18:36:20 ERROR  : ERROR:  column "nil" does not exist
+LINE 1: select * from products where product_category_id = NIL;
+                                                           ^
+2012-03-11 18:55:14 ERROR  : ERROR:  INSERT has more expressions than target columns
+LINE 42: E'airpig.jpg'
+         ^
+2012-03-20 11:45:49 ERROR  : ERROR:  syntax error at or near "nil"
+2012-03-22 16:27:31 ERROR  : ERROR:  null value in column "created_at" violates not-null constraint
+2012-03-22 16:27:35 ERROR  : ERROR:  null value in column "created_at" violates not-null constraint
+2013-01-28 16:21:52 ERROR  : ERROR:  database "sevenview_development" is being accessed by other users
+DETAIL:  There are 2 other sessions using the database.

@@ -14,3 +14,5 @@ end
 require 'kaminari'
 require 'liquid'
 require 'devise'
+require 'carrierwave'
+require 'fog'

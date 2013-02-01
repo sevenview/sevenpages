@@ -1,0 +1,28 @@
+<h2>Media Files</h2>
+
+<p><%= link_to "Upload a Media File", new_media_file_path, class: 'button add-button' %></p>
+
+<div class="media_files">
+  <table class="media_files_table">
+    <thead>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    </thead>
+    <tbody>
+    <%= content_tag_for(:tr, @media_files) do |file| %>
+      <tr>
+        <td><%= image_tag file.source.url  %></td>
+        <td>
+          <%= link_to 'edit', edit_media_file_path(file) %> |
+          <%= link_to 'delete', edit_media_file_path(file), method: :delete,
+                      confirm: 'Are you sure you want to delete this image?' %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= paginate @media_files %>

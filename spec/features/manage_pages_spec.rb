@@ -13,7 +13,7 @@ describe "Feature: Managing Pages" do
     end
 
     it "displays a table of all Pages" do
-      page.should have_selector("table.pages-table")
+      page.should have_selector("table.pages_table")
     end
 
     it "shows a link to create a new Page" do

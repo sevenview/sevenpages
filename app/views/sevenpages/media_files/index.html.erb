@@ -16,7 +16,7 @@
         <td><%= image_tag file.source.url  %></td>
         <td>
           <%= link_to 'edit', edit_media_file_path(file) %> |
-          <%= link_to 'delete', edit_media_file_path(file), method: :delete,
+          <%= link_to 'delete', media_file_path(file), method: :delete,
                       confirm: 'Are you sure you want to delete this image?' %>
         </td>
       </tr>

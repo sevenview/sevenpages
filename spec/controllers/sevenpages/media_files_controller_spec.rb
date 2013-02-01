@@ -22,7 +22,8 @@ module Sevenpages
   
     describe "GET 'edit'" do
       it "returns http success" do
-        get 'edit', use_route: :sevenpages
+        media_file = FactoryGirl.create :media_file
+        get 'edit', id: media_file.id , use_route: :sevenpages
         response.should be_success
       end
     end

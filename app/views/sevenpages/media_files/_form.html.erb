@@ -6,7 +6,9 @@
   <%= f.label :source %>
   <%= f.file_field :source  %>
 
+  <p><%= image_tag(@media_file.source_url) if @media_file.source? %></p>
+
   <p>
-    <%= f.submit 'Upload Media File', class: 'button submit-button' %> or <%= link_to 'Cancel', media_files_path  %>
+    <%= f.submit nil, class: 'button submit-button' %> or <%= link_to 'Cancel', media_files_path %>
   </p>
 <% end %>

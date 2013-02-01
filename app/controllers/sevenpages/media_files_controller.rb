@@ -21,6 +21,25 @@ module Sevenpages
     end
   
     def edit
+      @media_file = MediaFile.find(params[:id])
+    end
+
+    def update
+      @media_file = MediaFile.find(params[:id])
+
+      if @media_file.update_attributes(params[:media_file])
+        redirect_to media_files_path, notice: 'Updated Media File'
+      else
+        render :edit
+      end
+    end
+
+    def destroy
+      @media_file = MediaFile.find(params[:id])
+
+      if @media_file.destroy
+        redirect_to media_files_path, notice: 'Deleted Media File'
+      end
     end
   end
 end

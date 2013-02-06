@@ -4,7 +4,7 @@ module Sevenpages
 
     # Precompile assets
     initializer "sevenpages.assets" do |app|
-      app.config.assets.precompile += ['codemirror/*']
+      app.config.assets.precompile += ['sevenpages/codemirror/*']
     end
 
     config.generators do |g|

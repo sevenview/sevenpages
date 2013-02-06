@@ -14,3 +14,4 @@ end
 require 'kaminari'
 require 'liquid'
 require 'devise'
+require 'codemirror-rails'

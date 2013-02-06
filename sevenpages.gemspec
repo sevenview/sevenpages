@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Sevenpages::VERSION
   s.authors     = ["Stephen Clarke"]
   s.email       = ["steve@sevenview.ca"]
-  s.homepage    = "http://sevenview.ca"
+  s.homepage    = "http://github.com/sevenview/sevenpages"
   s.summary     = "An experiment in content management."
-  s.description = "Bespoke CMS for our clients."
+  s.description = "An experiment in content management."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency "kaminari"
   s.add_dependency "liquid", "~> 2.4.1"
   s.add_dependency "devise"
+  s.add_dependency "codemirror-rails"
 
   s.add_development_dependency "sqlite3"
 

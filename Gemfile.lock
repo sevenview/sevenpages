@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sevenpages (1.0.0)
+    sevenpages (1.1.0)
       codemirror-rails
       compass-rails
       devise

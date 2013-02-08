@@ -15,7 +15,7 @@
     <tbody>
     <%= content_tag_for(:tr, @media_files) do |media_file| %>
       <tr>
-        <td><%= image_tag media_file.source.url  %></td>
+        <td><%= image_tag media_file.source.thumb.url  %></td>
         <td><%= media_file.title %></td>
         <td><pre>{{ image "<%= media_file.title  %>" }}</pre></td>
         <td>

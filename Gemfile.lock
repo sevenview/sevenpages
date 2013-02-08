@@ -10,6 +10,7 @@ PATH
       kaminari
       liquid (~> 2.4.1)
       rails (~> 3.2.11)
+      rmagick
       zurb-foundation (~> 3.2.5)
 
 GEM
@@ -186,6 +187,7 @@ GEM
     rb-fsevent (0.9.3)
     rdoc (3.12.1)
       json (~> 1.4)
+    rmagick (2.13.1)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)

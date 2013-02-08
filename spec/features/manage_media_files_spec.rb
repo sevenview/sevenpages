@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'FEATURE: Manage Media Files:' do
+describe 'FEATURE: Managing Media Files:' do
   before do
     login
   end

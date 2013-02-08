@@ -21,7 +21,6 @@ Gem::Specification.new do |s|
   s.add_dependency "kaminari"
   s.add_dependency "liquid", "~> 2.4.1"
   s.add_dependency "devise"
-  s.add_dependency "codemirror-rails"
 
   s.add_development_dependency "sqlite3"
 

@@ -6,8 +6,6 @@ module Sevenpages
     # even on Heroku with initialize_on_precompile set to false
     # See http://timcardenas.com/how-to-develop-engines-that-compile-assets-on
     initializer "sevenpages.assets", group: :all do |app|
-      #app.config.assets.precompile += ['codemirror/*']
-
       # Uncomment the lines below to view the names of assets as they are
       # precompiled for the rails asset pipeline
       def compile_asset?(path)
@@ -30,4 +28,4 @@ end
 require 'kaminari'
 require 'liquid'
 require 'devise'
-require 'codemirror-rails'
+#require 'codemirror-rails'

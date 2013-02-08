@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     sevenpages (1.0.0)
-      codemirror-rails
       devise
       kaminari
       liquid (~> 2.4.1)
@@ -220,6 +219,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara-webkit
+  codemirror-rails
   coffee-rails (~> 3.2.1)
   compass-rails
   database_cleaner

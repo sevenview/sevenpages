@@ -19,4 +19,5 @@ spec/dummy/tmp/
 spec/dummy/log/*.log
 spec/dummy/public/uploads/*
 spec/dummy/public/assets/*
-spec/dummy/public/test/uploads
+spec/dummy/public/test
+spec/dummy/public/development

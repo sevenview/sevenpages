@@ -11,12 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130131204138) do
+ActiveRecord::Schema.define(:version => 20130208181430) do
 
   create_table "sevenpages_media_files", :force => true do |t|
     t.string   "source"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "title",      :limit => 100
   end
 
   create_table "sevenpages_pages", :force => true do |t|

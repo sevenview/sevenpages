@@ -22,7 +22,7 @@ rake db:migrate
 Add the following to your `config/routes.rb` file
 
 ```
-mount Sevenpages::Engine => "/sp-admin"
+mount Sevenpages::Engine, at: '/sp-admin'
 ```
 
 And this route, which must be the last route:

@@ -17,4 +17,5 @@ pickle-email-*.html
 spec/dummy/db/*.sqlite3
 spec/dummy/tmp/
 spec/dummy/log/*.log
-spec/dummy/public/uploads
+spec/dummy/public/uploads/*
+spec/dummy/public/assets/*

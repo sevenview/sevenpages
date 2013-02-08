@@ -1,24 +1,9 @@
 <% content_for :head do %>
-  <script src="/assets/codemirror/lib/codemirror.js"></script>
-  <link rel="stylesheet" href="/assets/codemirror/lib/codemirror.css">
-  <script src="/assets/codemirror/mode/xml/xml.js"></script>
-  <script src="/assets/codemirror/mode/javascript/javascript.js"></script>
-  <script src="/assets/codemirror/mode/css/css.js"></script>
-  <script src="/assets/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+  <%= stylesheet_link_tag    "sevenpages/codemirror_include" %>
 <% end %>
 
 <% content_for :last do %>
-  <script>
-    var ta = document.getElementById('code');
-    var editor = CodeMirror.fromTextArea(ta, {
-      mode: 'text/html',
-      tabMode: 'indent',
-      lineNumbers: true,
-      lineWrapping: true,
-      smartIndent: true
-    });
-    editor.setSize(null,800);
-  </script>
+  <%= javascript_include_tag 'sevenpages/codemirror_include' %>
 <% end %>
 
 <%= form_page_header('page') %>

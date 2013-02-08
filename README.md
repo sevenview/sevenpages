@@ -33,19 +33,6 @@ And this route, which must be the last route:
 get ':slug', to: 'sevenpages/public/pages#show', as: :page
 ```
 
-### Add Gems
-
-Add Compass and Foundation to your host app `Gemfile`
-
-** Not sure why this is required but for now it's necessary*
-
-```
-group :assets do
-  gem 'compass'
-  gem 'zurb-foundation'
-end
-```
-
 ### Configure CarrierWave uploads
 
 Configure environment variables for your S3 authorization:

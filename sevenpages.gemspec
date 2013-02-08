@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Sevenpages::VERSION
   s.authors     = ["Stephen Clarke"]
   s.email       = ["steve@sevenview.ca"]
-  s.homepage    = "http://sevenview.ca"
+  s.homepage    = "http://github.com/sevenview/sevenpages"
   s.summary     = "An experiment in content management."
-  s.description = "Bespoke CMS for our clients."
+  s.description = "An experiment in content management."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
 
@@ -23,10 +23,11 @@ Gem::Specification.new do |s|
   s.add_dependency "devise"
   s.add_dependency "carrierwave"
   s.add_dependency "fog"
+  s.add_dependency "codemirror-rails"
+  s.add_dependency "compass-rails"
+  s.add_dependency "zurb-foundation", "~>3.2.5"
 
   s.add_development_dependency "sqlite3"
-
-  # Testing
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "shoulda-matchers"
   s.add_development_dependency "factory_girl_rails"
@@ -35,8 +36,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "fivemat"
   s.add_development_dependency "ffaker"
   s.add_development_dependency "database_cleaner"
-
-  # Guard
   s.add_development_dependency "guard-rspec"
   s.add_development_dependency "rb-fsevent"
   s.add_development_dependency "growl"

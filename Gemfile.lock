@@ -2,10 +2,13 @@ PATH
   remote: .
   specs:
     sevenpages (1.0.0)
+      codemirror-rails
+      compass-rails
       devise
       kaminari
       liquid (~> 2.4.1)
       rails (~> 3.2.11)
+      zurb-foundation (~> 3.2.5)
 
 GEM
   remote: http://rubygems.org/
@@ -219,9 +222,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara-webkit
-  codemirror-rails
   coffee-rails (~> 3.2.1)
-  compass-rails
   database_cleaner
   factory_girl_rails
   ffaker
@@ -237,4 +238,3 @@ DEPENDENCIES
   shoulda-matchers
   sqlite3
   uglifier (>= 1.0.3)
-  zurb-foundation (~> 3.2.5)

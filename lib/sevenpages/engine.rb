@@ -28,4 +28,6 @@ end
 require 'kaminari'
 require 'liquid'
 require 'devise'
-#require 'codemirror-rails'
+require 'codemirror-rails'
+require 'compass-rails'
+require 'zurb-foundation'

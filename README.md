@@ -24,7 +24,7 @@ rake db:migrate
 Add the following to your `config/routes.rb` file
 
 ```
-mount Sevenpages::Engine => "/sevenpages"
+mount Sevenpages::Engine, at: '/sevenpages'
 ```
 
 And this route, which must be the last route:

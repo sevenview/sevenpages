@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   mount Sevenpages::Engine => "/sevenpages"
 
+  # IMPORTANT: This must come as the last route
   get ':slug', to: 'sevenpages/public/pages#show', as: :page
 end

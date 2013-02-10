@@ -9,7 +9,9 @@
 <body>
 
 <ul class='nav'>
-  <li><%= link_to 'Home', root_path %></li>
+  <li><%= link_to 'Home', main_app.root_path %></li>
+  <li><%= link_to 'Test Page', page_path('test') %></li>
+  <li><%= link_to 'Admin', sevenpages.root_path %></li>
   <% if user_signed_in? %>
   <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
   <% else %>

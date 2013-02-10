@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130208181430) do
+ActiveRecord::Schema.define(:version => 20130210201621) do
 
   create_table "sevenpages_media_files", :force => true do |t|
     t.string   "source"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(:version => 20130208181430) do
     t.datetime "updated_at",                :null => false
     t.string   "title",      :limit => 100
   end
+
+  add_index "sevenpages_media_files", ["title"], :name => "index_sevenpages_media_files_on_title", :unique => true
 
   create_table "sevenpages_pages", :force => true do |t|
     t.string   "title"
@@ -28,6 +30,8 @@ ActiveRecord::Schema.define(:version => 20130208181430) do
     t.datetime "created_at",                                   :null => false
     t.datetime "updated_at",                                   :null => false
   end
+
+  add_index "sevenpages_pages", ["slug"], :name => "index_sevenpages_pages_on_slug", :unique => true
 
   create_table "sevenpages_users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

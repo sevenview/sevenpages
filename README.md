@@ -39,6 +39,7 @@ Configure environment variables for your S3 authorization:
 
 ```
 $ heroku config:add S3_ACCESS_KEY=yourkey S3_SECRET_KEY=yoursecret
+$ heroku config:add S3_BUCKET_NAME=yourbucketname
 ```
 
 Add `carrierwave.rb` to your `config/initializers` directory with something like this:

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sevenpages (1.1.0)
+    sevenpages (1.2.0)
       carrierwave
       codemirror-rails
       compass-rails
@@ -59,7 +59,7 @@ GEM
     capybara-webkit (0.14.1)
       capybara (~> 2.0, >= 2.0.2)
       json
-    carrierwave (0.6.2)
+    carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
     childprocess (0.3.6)
@@ -89,7 +89,7 @@ GEM
       warden (~> 1.2.1)
     diff-lcs (1.1.3)
     erubis (2.7.0)
-    excon (0.13.4)
+    excon (0.16.10)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.2.0)
@@ -100,9 +100,9 @@ GEM
     ffaker (1.15.0)
     ffi (1.3.1)
     fivemat (1.1.0)
-    fog (1.3.1)
+    fog (1.9.0)
       builder
-      excon (~> 0.13.0)
+      excon (~> 0.14)
       formatador (~> 0.2.0)
       mime-types
       multi_json (~> 1.0)
@@ -151,9 +151,9 @@ GEM
       sass (>= 3.2.0)
       sassy-math (>= 1.5)
     multi_json (1.5.0)
-    net-scp (1.0.4)
-      net-ssh (>= 1.99.1)
-    net-ssh (2.6.3)
+    net-scp (1.0.6)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.6.5)
     nokogiri (1.5.6)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
@@ -187,7 +187,7 @@ GEM
     rb-fsevent (0.9.3)
     rdoc (3.12.1)
       json (~> 1.4)
-    rmagick (2.13.1)
+    rmagick (2.13.2)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
       rspec-expectations (~> 2.12.0)

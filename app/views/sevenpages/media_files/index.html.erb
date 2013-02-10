@@ -17,7 +17,7 @@
       <tr>
         <td><%= image_tag media_file.source.thumb.url  %></td>
         <td><%= media_file.title %></td>
-        <td><pre>{{ image "<%= media_file.title  %>" }}</pre></td>
+        <td><pre>{% image "<%= media_file.title  %>" %}</pre></td>
         <td>
           <%= link_to 'edit', edit_media_file_path(media_file) %> |
           <%= link_to 'delete', media_file_path(media_file), method: :delete,

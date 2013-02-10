@@ -16,7 +16,7 @@ describe 'FEATURE: Managing Media Files:' do
     end
 
     it 'shows the image short-code' do
-      page.should have_content '{{ image "Logo" }}'
+      page.should have_content '{% image "Logo" %}'
     end
 
     it 'allows the image short-code to be copied to clipboard'

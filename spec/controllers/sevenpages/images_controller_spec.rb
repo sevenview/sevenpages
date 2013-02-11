@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module Sevenpages
-  describe MediaFilesController do
+  describe ImagesController do
     before do
       sign_in FactoryGirl.create :user
     end
@@ -22,8 +22,8 @@ module Sevenpages
   
     describe "GET 'edit'" do
       it "returns http success" do
-        media_file = FactoryGirl.create :media_file
-        get 'edit', id: media_file.id , use_route: :sevenpages
+        image = FactoryGirl.create :image
+        get 'edit', id: image.id , use_route: :sevenpages
         response.should be_success
       end
     end

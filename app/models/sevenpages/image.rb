@@ -1,11 +1,11 @@
 module Sevenpages
-  class MediaFile < ActiveRecord::Base
+  class Image < ActiveRecord::Base
     attr_accessible :source, :title
 
     # -- Validations --
     validates :source, :title, presence: true
 
     # -- CarrierWave --
-    mount_uploader :source, MediaFileUploader
+    mount_uploader :source, ImageUploader
   end
 end

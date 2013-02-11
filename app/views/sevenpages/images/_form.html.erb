@@ -1,0 +1,17 @@
+<%= form_page_header('Image') %>
+
+<%= error_messages_for @image %>
+
+<%= form_for @image, multipart: true do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :source %>
+  <%= f.file_field :source  %>
+
+  <p><%= image_tag(@image.source_url) if @image.source? %></p>
+
+  <p>
+    <%= f.submit nil, class: 'button submit-button' %> or <%= link_to 'Cancel', images_path %>
+  </p>
+<% end %>

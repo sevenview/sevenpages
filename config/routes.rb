@@ -4,6 +4,6 @@ Sevenpages::Engine.routes.draw do
   devise_for :users, :class_name => "Sevenpages::User", module: :devise
 
   resources :pages
-  resources :media_files
+  resources :images
 end
 

@@ -1,0 +1,32 @@
+<h2>Images</h2>
+
+<p><%= link_to "Add an Image", new_image_path, class: 'button add-button' %></p>
+
+<div class="images">
+  <table class="images_table">
+    <thead>
+    <tr>
+      <td>Image</td>
+      <td>Title</td>
+      <td>Shortcode</td>
+      <td>&nbsp;</td>
+    </tr>
+    </thead>
+    <tbody>
+    <%= content_tag_for(:tr, @images) do |image| %>
+      <tr>
+        <td><%= image_tag image.source.thumb.url  %></td>
+        <td><%= image.title %></td>
+        <td><pre>{% image "<%= image.title  %>" %}</pre></td>
+        <td>
+          <%= link_to 'edit', edit_image_path(image) %> |
+          <%= link_to 'delete', image_path(image), method: :delete,
+                      confirm: 'Are you sure you want to delete this image?' %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= paginate @images %>

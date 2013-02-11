@@ -16,7 +16,7 @@ module Sevenpages
 
         def render(context)
           begin
-            image = Sevenpages::MediaFile.find_by_title!(@image_title)
+            image = Sevenpages::Image.find_by_title!(@image_title)
           rescue ActiveRecord::RecordNotFound
             return %Q(Liquid Error: Image titled "#{@image_title}" could not be found.)
           end

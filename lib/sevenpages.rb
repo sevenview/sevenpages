@@ -1,5 +1,5 @@
 require "sevenpages/engine"
-require "sevenpages/liquid/image_tag"
+require "sevenpages/liquid"
 
 module Sevenpages
   mattr_accessor :reserved_slugs

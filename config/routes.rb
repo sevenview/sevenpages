@@ -5,5 +5,6 @@ Sevenpages::Engine.routes.draw do
 
   resources :pages
   resources :images
+  resources :content_blocks
 end
 

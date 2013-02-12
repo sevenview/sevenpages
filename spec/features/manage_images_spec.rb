@@ -19,8 +19,6 @@ describe 'FEATURE: Managing Images:' do
       page.should have_content '{% image "Logo" %}'
     end
 
-    it 'allows the image short-code to be copied to clipboard'
-
     it 'shows the image title' do
       within '.images' do
         page.should have_content 'Title'

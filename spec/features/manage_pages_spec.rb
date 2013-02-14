@@ -13,29 +13,29 @@ describe "Feature: Managing Pages" do
     end
 
     it "displays a table of all Pages" do
-      page.should have_selector("table.pages_table")
+      expect(page).to have_selector("table.pages_table")
     end
 
     it "shows a link to create a new Page" do
-      page.should have_content "Add a Page"
-      page.should have_selector '.button.add-button'
+      expect(page).to have_content "Add a Page"
+      expect(page).to have_selector '.button.add-button'
     end
 
     it "shows a link to edit a Page" do
-      page.should have_link "Edit"
+      expect(page).to have_link "Edit"
     end
 
     it "shows a link to delete a Page" do
-      page.should have_link "Delete"
+      expect(page).to have_link "Delete"
     end
 
     it "shows a published status" do
-      page.should have_selector('.published-status.published')
-      page.should have_selector('.published-status.unpublished')
+      expect(page).to have_selector('.published-status.published')
+      expect(page).to have_selector('.published-status.unpublished')
     end
 
     it "supports paging through items" do
-      page.should have_selector('nav.pagination')
+      expect(page).to have_selector('nav.pagination')
     end
   end
 
@@ -52,10 +52,10 @@ describe "Feature: Managing Pages" do
       click_button 'Create Page'
 
       within '.flash.notice' do
-        page.should have_content 'Added Page'
+        expect(page).to have_content 'Added Page'
       end
 
-      page.should have_content 'Foo Page'
+      expect(page).to have_content 'Foo Page'
     end
 
     it "doesn't create a new page when given invalid data" do
@@ -63,7 +63,7 @@ describe "Feature: Managing Pages" do
       click_button 'Create Page'
 
       within '.error-messages' do
-        page.should have_content 'prohibited'
+        expect(page).to have_content 'prohibited'
       end
     end
   end
@@ -80,10 +80,10 @@ describe "Feature: Managing Pages" do
       click_button 'Update Page'
 
       within '.flash.notice' do
-        page.should have_content 'Updated Page'
+        expect(page).to have_content 'Updated Page'
       end
 
-      page.should have_content 'Foo Bar'
+      expect(page).to have_content 'Foo Bar'
     end
 
     it "Doesn't update the page when given invalid data" do
@@ -91,7 +91,7 @@ describe "Feature: Managing Pages" do
       click_button 'Update Page'
 
       within '.error-messages' do
-        page.should have_content 'prohibited'
+        expect(page).to have_content 'prohibited'
       end
     end
   end
@@ -105,9 +105,9 @@ describe "Feature: Managing Pages" do
     it "deletes the selected page" do
       click_link 'Delete'
       within '.flash.notice' do
-        page.should have_content 'deleted'
+        expect(page).to have_content 'deleted'
       end
-      page.should_not have_content 'Foo'
+      expect(page).to_not have_content 'Foo'
     end
   end
 end

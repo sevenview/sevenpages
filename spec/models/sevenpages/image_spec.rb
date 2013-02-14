@@ -14,7 +14,7 @@ module Sevenpages
       it "creates a thumbnail version" do
         Sevenpages::ImageUploader.enable_processing = true
         image = FactoryGirl.create :image
-        image.source.thumb.should have_dimensions(100,100)
+        expect(image.source.thumb).to have_dimensions(100,100)
       end
     end
   end

@@ -9,14 +9,14 @@ module Sevenpages
     describe "GET 'index'" do
       it "returns http success" do
         get 'index', use_route: :sevenpages
-        response.should be_success
+        expect(response).to be_success
       end
     end
   
     describe "GET 'new'" do
       it "returns http success" do
         get 'new', use_route: :sevenpages
-        response.should be_success
+        expect(response).to be_success
       end
     end
   
@@ -24,7 +24,7 @@ module Sevenpages
       it "returns http success" do
         image = FactoryGirl.create :image
         get 'edit', id: image.id , use_route: :sevenpages
-        response.should be_success
+        expect(response).to be_success
       end
     end
   

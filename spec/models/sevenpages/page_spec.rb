@@ -15,30 +15,30 @@ module Sevenpages
       it "requires a unique slug" do
         FactoryGirl.create :page, slug: 'foo-bar'
         page = FactoryGirl.build(:page, slug: 'foo-bar')
-        page.should_not be_valid
-        page.errors[:slug].should == ["has already been taken"]
+        expect(page).to_not be_valid
+        expect(page.errors[:slug]).to eq(["has already been taken"])
       end
 
       it "doesn't allow reserved slug names" do
         Sevenpages.reserved_slugs << 'reserved-slug'
         page = FactoryGirl.build(:page, slug: 'reserved-slug')
-        page.should_not be_valid
-        page.errors[:slug].should == ['is reserved']
+        expect(page).to_not be_valid
+        expect(page.errors[:slug]).to eq(['is reserved'])
       end
     end
 
     it "is unpublished by default" do
       page = FactoryGirl.create :page
-      page.should_not be_published
+      expect(page).to_not be_published
     end
 
     describe ".published" do
       it "returns only published pages" do
         FactoryGirl.create :published_page
         FactoryGirl.create :unpublished_page
-        Sevenpages::Page.published.should have(1).items
-        Sevenpages::Page.first.should be_published
-        Sevenpages::Page.last.should_not be_published
+        expect(Sevenpages::Page.published).to have(1).items
+        expect(Sevenpages::Page.first).to be_published
+        expect(Sevenpages::Page.last).to_not be_published
       end
     end
   end

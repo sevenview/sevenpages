@@ -6,14 +6,14 @@ describe "FEATURE: Displaying Liquid tags" do
       FactoryGirl.create :image, title: 'Logo'
       FactoryGirl.create :published_page, slug: 'logo', content: '{% image "Logo" %}'
       visit page_path('logo')
-      page.should have_selector("img[src*=valid_image]")
-      page.should have_selector("img[alt*=Logo]")
+      expect(page).to have_selector("img[src*=valid_image]")
+      expect(page).to have_selector("img[alt*=Logo]")
     end
 
     it "shows an appropriate error when the image could not be found" do
       FactoryGirl.create :published_page, slug: 'logo', content: '{% image "foofy" %}'
       visit page_path('logo')
-      page.should have_content %Q(Liquid Error: Image titled "foofy" could not be found.)
+      expect(page).to have_content %Q(Liquid Error: Image titled "foofy" could not be found.)
     end
   end
 
@@ -24,7 +24,7 @@ describe "FEATURE: Displaying Liquid tags" do
                          slug: 'test',
                          content: '{% content "Foofy" %}'
       visit page_path('test')
-      page.should have_content "test content block"
+      expect(page).to have_content "test content block"
     end
 
     it "shows an appropriate error when the content block could not be found" do
@@ -32,7 +32,7 @@ describe "FEATURE: Displaying Liquid tags" do
                          slug: 'test',
                          content: '{% content "Foofy" %}'
       visit page_path('test')
-      page.should have_content %Q(Liquid Error: Content block titled "Foofy" could not be found.)
+      expect(page).to have_content %Q(Liquid Error: Content block titled "Foofy" could not be found.)
     end
   end
 end

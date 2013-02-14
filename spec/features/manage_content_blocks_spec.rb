@@ -9,8 +9,8 @@ describe "FEATURE: Manage Content Blocks" do
     it "shows a set of content bloaks" do
       FactoryGirl.create_list(:content_block, 2)
       visit sevenpages.content_blocks_path
-      page.should have_selector('.content_blocks')
-      page.should have_selector('.content_block', count: 2)
+      expect(page).to have_selector('.content_blocks')
+      expect(page).to have_selector('.content_block', count: 2)
     end
   end
 
@@ -23,13 +23,13 @@ describe "FEATURE: Manage Content Blocks" do
     it "creates a Content Block given valid attributes" do
       fill_in 'Title', with: "My Content"
       click_button 'Create Content block'
-      page.should have_content 'Content Added'
+      expect(page).to have_content 'Content Added'
     end
 
     it "doesn't create a content block when given invalid attributes" do
       click_button 'Create Content block'
-      page.should have_selector('.error-messages')
-      page.should have_content('error')
+      expect(page).to have_selector('.error-messages')
+      expect(page).to have_content('error')
     end
   end
 
@@ -43,15 +43,15 @@ describe "FEATURE: Manage Content Blocks" do
       click_link 'edit'
       fill_in 'Title', with: "Foofy"
       click_button 'Update Content block'
-      page.should have_content /updated/i
-      page.should have_content 'Foofy'
+      expect(page).to have_content /updated/i
+      expect(page).to have_content 'Foofy'
     end
 
     it "doesn't update when given invalid attributes" do
       click_link 'edit'
       fill_in 'Title', with: ''
       click_button 'Update Content block'
-      page.should have_selector('.error-messages')
+      expect(page).to have_selector('.error-messages')
     end
   end
 
@@ -60,8 +60,8 @@ describe "FEATURE: Manage Content Blocks" do
       FactoryGirl.create(:content_block, title: 'Foofy')
       visit sevenpages.content_blocks_path
       click_link 'delete'
-      page.should have_content /deleted/i
-      page.should_not have_content 'Foofy'
+      expect(page).to have_content /deleted/i
+      expect(page).to_not have_content 'Foofy'
     end
   end
 end

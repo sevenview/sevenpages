@@ -1,3 +1,5 @@
+require 'sevenpages/dependencies'
+
 module Sevenpages
   class Engine < ::Rails::Engine
     isolate_namespace Sevenpages
@@ -32,11 +34,3 @@ module Sevenpages
   end
 end
 
-require 'kaminari'
-require 'liquid'
-require 'devise'
-require 'carrierwave'
-require 'fog'
-require 'codemirror-rails'
-require 'compass-rails'
-require 'zurb-foundation'

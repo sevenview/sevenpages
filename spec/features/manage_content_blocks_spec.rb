@@ -5,12 +5,14 @@ describe "FEATURE: Manage Content Blocks" do
     login
   end
 
-  describe "Listing content blocks" do
-    it "shows a set of content bloaks" do
+  describe "the index page" do
+    before do
       FactoryGirl.create_list(:content_block, 2)
       visit sevenpages.content_blocks_path
-      expect(page).to have_selector('.content_blocks')
-      expect(page).to have_selector('.content_block', count: 2)
+    end
+
+    it_behaves_like "an administrative listing page" do
+      let(:resource_name) { "content_block" }
     end
   end
 
@@ -40,7 +42,7 @@ describe "FEATURE: Manage Content Blocks" do
     end
 
     it "updates a content block" do
-      click_link 'edit'
+      click_link 'Edit'
       fill_in 'Title', with: "Foofy"
       click_button 'Update Content block'
       expect(page).to have_content /updated/i
@@ -48,7 +50,7 @@ describe "FEATURE: Manage Content Blocks" do
     end
 
     it "doesn't update when given invalid attributes" do
-      click_link 'edit'
+      click_link 'Edit'
       fill_in 'Title', with: ''
       click_button 'Update Content block'
       expect(page).to have_selector('.error-messages')
@@ -59,7 +61,7 @@ describe "FEATURE: Manage Content Blocks" do
     it "deletes a content block" do
       FactoryGirl.create(:content_block, title: 'Foofy')
       visit sevenpages.content_blocks_path
-      click_link 'delete'
+      click_link 'Delete'
       expect(page).to have_content /deleted/i
       expect(page).to_not have_content 'Foofy'
     end

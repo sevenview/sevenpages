@@ -5,14 +5,14 @@ describe 'FEATURE: Managing Images:' do
     login
   end
 
-  describe 'Displaying the list' do
+  describe 'the index page' do
     before do
       FactoryGirl.create :image
       visit sevenpages.images_path
     end
 
-    it 'shows a set of all media files' do
-      expect(page).to have_selector('.image')
+    it_behaves_like "an administrative listing page" do
+      let(:resource_name) { "image" }
     end
 
     it 'shows the image short-code' do
@@ -58,7 +58,7 @@ describe 'FEATURE: Managing Images:' do
     it 'updates an image with valid data' do
       FactoryGirl.create :image
       visit sevenpages.images_path
-      click_link 'edit'
+      click_link 'Edit'
       click_button "Update Image"
       expect(page).to have_content /updated/i
     end
@@ -77,7 +77,7 @@ describe 'FEATURE: Managing Images:' do
     it 'deletes the image' do
       FactoryGirl.create :image
       visit sevenpages.images_path
-      click_link 'delete'
+      click_link 'Delete'
       expect(page).to have_content /deleted/i
     end
   end

@@ -5,28 +5,15 @@ describe "Feature: Managing Pages" do
     login
   end
 
-  describe "Displaying the master list" do
+  describe "the index page" do
     before do
       FactoryGirl.create_list :published_page, 15
       FactoryGirl.create_list :unpublished_page, 15
       visit sevenpages.pages_path
     end
 
-    it "displays a table of all Pages" do
-      expect(page).to have_selector("table.pages_table")
-    end
-
-    it "shows a link to create a new Page" do
-      expect(page).to have_content "Add a Page"
-      expect(page).to have_selector '.button.add-button'
-    end
-
-    it "shows a link to edit a Page" do
-      expect(page).to have_link "Edit"
-    end
-
-    it "shows a link to delete a Page" do
-      expect(page).to have_link "Delete"
+    it_behaves_like "an administrative listing page" do
+      let(:resource_name) { "page" }
     end
 
     it "shows a published status" do

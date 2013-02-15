@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency "fog"
   s.add_dependency "rmagick"
   s.add_dependency "codemirror-rails"
+  s.add_dependency "tinymce-rails"
   s.add_dependency "compass-rails"
   s.add_dependency "zurb-foundation", "~>3.2.5"
 

@@ -13,3 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require tinymce-jquery
+//= require sevenpages/main
+//= require sevenpages/content_blocks

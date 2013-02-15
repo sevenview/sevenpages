@@ -6,11 +6,8 @@ module Sevenpages
 
     initializer "sevenpages.assets", group: :all do |app|
       app.config.assets.precompile += [
-          'codemirror.css',
-          'codemirror.js',
-          'codemirror/*',
-          'sevenpages/codemirror_include.css',
-          'sevenpages/codemirror_include.js'
+        'sevenpages/codemirror_include.css',
+        'sevenpages/codemirror_include.js'
       ]
       
       #Uncomment the lines below to view the names of assets as they are
@@ -33,4 +30,3 @@ module Sevenpages
     end
   end
 end
-

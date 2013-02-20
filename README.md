@@ -9,7 +9,13 @@ Installation
 Add the following to your `Gemfile`
 
 ```
-gem 'sevenpages', git: 'git://github.com/Sevenview/sevenpages.git'
+gem 'sevenpages', git: 'git://github.com/sevenview/sevenpages.git'
+```
+
+and update with Bundler
+
+```
+$ bundle install
 ```
 
 ### Install the migrations
@@ -67,7 +73,13 @@ CarrierWave.configure do |config|
 end
 ```
 
-Now you can navigate to the Sevenpages admin at `http://yourapp/sevenpages`
+### Create a User
+```
+$ rails console
+> Sevenpages::User.create(email: 'email@example.org', password: 'uniquepassword')
+```
+
+Now you can navigate to the Sevenpages admin at `http://yourapp/sevenpages` and login with the account you created.
 
 
 Add Devise Routes

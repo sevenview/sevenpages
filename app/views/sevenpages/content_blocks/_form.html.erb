@@ -4,7 +4,7 @@
 
 <%= form_for @content_block do |f| %>
   <%= f.label :title %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, autofocus: true %>
 
   <%= f.label :content %>
   <%= f.text_area :content, class: 'editor'  %>
